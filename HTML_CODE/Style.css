@@ -1,0 +1,120 @@
+/* Navbar container */
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;   /* logo left, links right */
+  background: linear-gradient(90deg, #c471ed, #f64f59);
+  padding: 15px 60px;
+  height: 80px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+/* Website logo section */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.logo span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  color: white;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Navigation links container (right side) */
+.Navbar-content {
+  display: flex;
+  gap: 25px;
+}
+
+/* Navigation links */
+#Navigation {
+  text-decoration: none;
+  color: white;
+  padding: 10px 18px;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+/* Hover effects */
+#Navigation:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: white;
+  transform: translateY(-2px);
+}
+
+/* Active link style */
+#Navigation.active {
+  background-color: white;
+  color: #f64f59;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-content{
+    margin-top: 10px;
+        color: rgb(97, 7, 94);
+        margin: 130x auto;
+        background-color: rgb(216, 196, 221);
+        text-align: center;
+        padding-right: 80px;
+        padding-left: 80px;
+        padding-bottom: 20px;    
+        border-color: rgb(6, 5, 5);
+        border-style: solid;
+        border-width: 2px;
+        border-radius: 15px;
+        cursor:text;
+
+    }
+.main-content p{
+    text-align: justify;
+}
+    #Main-content-btn{
+        background-color: #007bff;  /* Blue background */
+  color: white;               /* White text */
+  border: none;               /* No border */
+  padding: 12px 24px;         /* Space around text */
+  font-size: 16px;            /* Slightly larger text */
+  border-radius: 8px;         /* Rounded corners */
+  cursor: pointer;            /* Pointer cursor on hover */
+  transition: 300ms;
+    }
+ #Main-content-btn:hover{
+  background-color: rgb(40, 24, 176);
+   
+ }   
+    
+    
+   
+   
