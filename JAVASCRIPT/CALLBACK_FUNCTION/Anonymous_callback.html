@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function show(arg)
+        {
+            console.log(arg)
+            arg()
+        }
+        show(function()
+        
+        {
+            console.log("this is the anonymous call back calling")
+        })
+    </script>
+</body>
+</html>

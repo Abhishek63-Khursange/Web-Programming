@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let is the blocked scoped variable we cannot perform redecelration on let keyword
+        function show()
+        {
+            if(true)
+            {
+                let a=5;// this will access only this block
+                console.log(a);
+            }
+            //console.log(a) // error a is not define
+        }
+        show();
+
+        
+        function display()
+        {
+            let b=6;
+            if(true)
+            {
+                console.log(b) // it can access 
+            }
+            console.log(b)  // it can access 
+        }
+
+        display();
+
+
+
+    // hoisting
+  
+    //console.log(ab) // throw the error 
+     //let ab=4
+
+     // re-decleration
+
+     let c=6;  // cannot redeclare scoped variable
+     console.log(c)
+     //let c=7;
+     c=8; //re-assigned is allowed of let variable
+     console.log(c)
+         
+    </script>
+</body>
+</html>

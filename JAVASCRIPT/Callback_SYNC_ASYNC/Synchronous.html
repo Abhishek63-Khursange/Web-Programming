@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>synchronous</title>
+</head>
+<body>
+    <script>
+       console.log("sum")
+       setTimeout(()=>{
+        var a=2;
+        var b=3;
+        var c=a+b;
+        console.log("sum is :"+c)
+       },2000)
+
+       console.log("factorial")
+       setTimeout(()=>{
+        var num=5;
+        var f=1;
+        for(var i=1;i<=num;i++)
+        {
+            f=f*i;
+        }
+        console.log("factorial is: "+f)
+       },1000)
+
+       console.log("square")
+       setTimeout(()=>{
+        var num=5;
+        var square=num*num;
+        console.log("square is :"+square)
+       },1500)
+        
+    </script>
+</body>
+</html>
+/*
+🧩 Real-Life Based Async JavaScript Questions
+1️⃣ Food Order Simulation
+
+Problem:
+
+You order pizza 🍕, fries 🍟, and a drink 🥤.
+
+Pizza takes 3 sec, fries 2 sec, drink 1 sec to prepare.
+
+Print logs in order of preparation using setTimeout.
+
+2️⃣ Online Bookstore Checkout
+
+Problem:
+
+When a user clicks “Buy”,
+
+Validate payment (2 sec)
+
+Check inventory (1 sec)
+
+Generate invoice (1.5 sec)
+
+Use asynchronous callbacks to simulate this flow.
+
+3️⃣ Student Marks Report
+
+Problem:
+
+You have an array of students with marks.
+
+After 2 sec, print all students who passed.
+
+After 1 sec, print topper student.
+
+After 1.5 sec, print average marks.
+
+4️⃣ Movie Ticket Booking
+
+Problem:
+
+Check seat availability (1 sec)
+
+Reserve seat (2 sec)
+
+Generate ticket (0.5 sec)
+
+Print messages as each step completes using setTimeout independent.
+
+5️⃣ Social Media Notifications
+
+Problem:
+
+Fetch likes (1 sec)
+
+Fetch comments (2 sec)
+
+Fetch shares (1.5 sec)
+
+Log them asynchronously but independently.
+
+6️⃣ Shopping Cart Discount
+
+Problem:
+
+Array of items with prices.
+
+After 2 sec, apply discount to items > 500
+
+After 1 sec, calculate total amount
+
+After 1.5 sec, print most expensive item.
+
+7️⃣ Bank Transaction Simulator
+
+Problem:
+
+Withdraw money (2 sec)
+
+Check balance (1 sec)
+
+Send transaction receipt (1.5 sec)
+
+Use callbacks/setTimeout to simulate asynchronous bank operations.
+
+8️⃣ Weather Forecast
+
+Problem:
+
+Fetch temperature (1 sec)
+
+Fetch humidity (1.5 sec)
+
+Fetch wind speed (2 sec)
+
+Display all three asynchronously.
+
+9️⃣ Exam Result Publishing
+
+Problem:
+
+Students array → marks fetched from server (2 sec)
+
+Identify failed students (1 sec)
+
+Identify topper (1.5 sec)
+
+Use filter, map, reduce + setTimeout to simulate async API.
+
+🔟 Online Food Delivery Ratings
+
+Problem:
+
+Fetch restaurant ratings (1 sec)
+
+Fetch user reviews (1.5 sec)
+
+Fetch delivery time (2 sec)
+
+Print independently but asynchronously using arrow functions and setTimeout.
+
+💡 Pro Tips for Solving:
+
+Start by logging normal console messages to see synchronous order.
+
+Wrap each task in a setTimeout() for delays.
+
+Use arrow functions for shorter syntax.
+
+For array problems, combine with filter(), map(), reduce() wherever needed.
+
+Try to predict output before running — it helps in interviews.
+*/

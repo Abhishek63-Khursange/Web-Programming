@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>call back hell</title>
+</head>
+<body>
+    <script>
+        console.log("sum")
+        setTimeout(()=>{
+            var a=5,b=6;
+            var c=a+b;
+            console.log(`sum of ${a} and ${b} is : ${c}`);
+         console.log("factorial")
+         setTimeout(()=>{
+            var f=1;
+            for(var i=1;i<=c;i++)
+            {
+                f=f*i
+            }
+            console.log(`factorial of ${c} is : ${f}`);
+         console.log("square")
+         setTimeout(()=>{
+            var square=f*f;
+            console.log(`square of ${f} is : ${square}`)
+         },3000)   
+
+         },2000)   
+        },1000)
+    </script>
+</body>
+</html>
+

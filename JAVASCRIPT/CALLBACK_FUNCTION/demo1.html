@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>callback function</title>
+</head>
+<body>
+    <script>
+        function show(arg){
+            console.log(arg)// print the defination
+            arg() // print the output
+
+        }
+        function demo()
+        {
+            console.log("hello callback function")
+        }
+        show(demo); //call back function of demo
+/*
+A callback function is a function passed as an argument to another function, which is then executed later (called back) inside that function.
+
+In simple words —
+
+A callback is a function that is called after another function has finished executing.*/
+
+    </script>
+</body>
+</html>

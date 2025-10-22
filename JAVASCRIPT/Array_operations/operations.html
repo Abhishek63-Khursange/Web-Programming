@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Array operations</title>
+</head>
+<body>
+    <script>
+
+        
+        var arr=[20,30,69,48,5,7,1,96,55,62,22,64,89,87,56,55]
+        var evenArray=[];
+        var oddArray=[];
+        arr.forEach((value,index)=>{
+            if(value%2===0)
+            {
+                evenArray.push(value) // push operations use to push the element from one array to another 
+            }
+        })
+        
+    console.log(evenArray)
+
+    arr.forEach((value1,index1)=>{
+        if(value1 % 2!==0){
+            oddArray.push(value1);
+        }
+    })
+    console.log(oddArray)
+
+    
+
+  //fillter 
+ let numbers = [10, 25, 30, 45, 50];
+
+// filter all numbers greater than 30
+let result = numbers.filter(num => num > 30);
+
+console.log(result); 
+
+let result1=numbers.filter(num => num<30);
+console.log(result1)
+
+
+//map function
+let numbers3 = [1, 2, 3, 4, 5];
+
+// square each number
+let squares = numbers3.map(num => num * num);
+
+console.log(squares); // 👉 [1, 4, 9, 16, 25]
+
+
+
+// Reduce funtion
+let numbers4 = [10, 20, 30, 40];
+
+// sum of all numbers
+let sum = numbers4.reduce((acc, curr) => acc + curr, 0);
+
+console.log(sum); // 👉 100
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
