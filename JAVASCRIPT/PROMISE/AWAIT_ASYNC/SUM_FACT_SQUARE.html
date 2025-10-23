@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //sum function promise
+       async function sum(a,b){
+        return new Promise((resolved,rejected)=>{
+            console.log("sum is started")
+            setTimeout(()=>{
+                var c=a+b;
+                if(c<0)
+                   rejected("error invalid additon")
+                else
+                resolved(c)   
+            },2000);
+        });
+       }
+       //factorial function promise
+       async function factorial(c){
+        return new Promise((resolved,rejected)=>{
+            console.log("factorial started")
+            setTimeout(()=>{
+                var f=1;
+                for(var i=1;i<=c;i++)
+                {
+                    f=f*i;
+                }
+                if(f>0)
+                    resolved(f)
+                else
+                    rejected("error negative number")    
+            },3000);
+        });
+       }
+       //square function promise 
+       async function square(f){
+        return new Promise((resolved,rejected)=>{
+            console.log("Square is started")
+            setTimeout(()=>{
+                var sq=f*f;
+                if(sq<0)
+                   rejected("cant be a sqaure ")
+                else
+                   resolved(sq)   
+            },3000)
+        });
+       }
+
+
+// function to handle the promises 
+async function handlesPromies(a,b){
+    try{
+        const sumofno=await sum(a,b);
+        console.log(sumofno);
+        const facto=await factorial(sumofno);
+        console.log(facto);
+        const sqr=await square(facto);
+        console.log(sqr)
+    }
+    catch(error)
+    {
+        console.log(error)
+    }
+
+}
+
+//calling promise handling function
+handlesPromies(4,-5)
+
+    </script>
+</body>
+</html>

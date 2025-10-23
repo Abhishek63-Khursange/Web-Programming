@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Promise function</title>
+</head>
+<body>
+    <script>
+        var evencheck=function checkNumber(num){
+            return new Promise((even,odd)=>{
+                if(num%2===0)
+                    even(`${num} is even`)
+                else
+                    odd(`${num} is odd`)    
+            });
+        }
+
+        var callfunc=evencheck(89656457854647);
+        callfunc.then((message)=>{
+            console.log(message)
+        }).catch((error)=>{
+            console.log(error)
+        })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var obj= new Promise((resolve,reject)=>{
+        var n=67;
+        if(n%2===0)
+        {
+           resolve("even");
+        }else{
+            reject("odd");
+        }
+
+        });
+
+        obj.then((message)=>{
+            console.log(message)
+        }).catch((error)=>{
+            console.log(error)
+        })
+    </script>
+</body>
+</html>

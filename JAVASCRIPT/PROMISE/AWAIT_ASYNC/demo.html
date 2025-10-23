@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Await & Async</title>
+</head>
+<body>
+   <script>
+   var checkAGE=function Agechecker(age){
+    return new Promise((eligible,noteligible)=>{
+           if(age>=18)
+              eligible(`Age is ${age}, you are eligible for vote `);
+           else
+              noteligible(`Age is ${age}, you are not eligible for voting`)   
+    });
+   }
+   
+   //promise handling through the Async and await
+
+   async function Votingchecker(age){
+    try{
+        var voterage=await checkAGE(age);
+        console.log(voterage);
+    }
+    catch(error){
+        console.log(error)
+    }
+   }
+
+   //function calling
+   Votingchecker(18);
+
+
+
+   </script>
+
+</body>
+</html>
