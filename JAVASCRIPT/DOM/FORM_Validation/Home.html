@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRACT-EASY | Home</title>
+  <link rel="stylesheet" href="Homestyle.css">
+   <script>
+        var isLoggedInFlag = localStorage.getItem("isLoggedIn");
+        if(!isLoggedInFlag){
+            location.href = "login.html"
+        }
+    </script>
+
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">PRACT-EASY</div>
+      <ul class="nav-links">
+        <li><a href="Home.html" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="auth-btns">
+        <a href="login.html" class="btn">Sign In</a>
+        <a href="Form.html" class="btn-outline">Sign Up</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Empowering Learning with <span>AI & Technology</span></h1>
+      <p>Join PRACT-EASY — your gateway to modern learning and professional growth.</p>
+      <a href="Form.html" class="btn-primary">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <h2>Why Choose PRACT-EASY?</h2>
+    <div class="feature-container">
+      <div class="feature-box">
+        <h3>💡 Interactive Learning</h3>
+        <p>Experience hands-on, real-world learning through engaging modules and projects.</p>
+      </div>
+      <div class="feature-box">
+        <h3>🚀 Career Growth</h3>
+        <p>Get job-ready skills and insights from industry experts.</p>
+      </div>
+      
+      <!-- ✅ Clickable Community Box -->
+      <a href="community.html" class="feature-box link-box">
+        <h3>🌐 Global Community</h3>
+        <p>Collaborate, share, and grow with learners across the globe.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <button onclick="logout()">Logout</button>
+       <script>
+        function logout(){
+            localStorage.removeItem("isLoggedIn");
+            location.href="login.html";
+        }
+    </script>
+
+    <p>© 2025 PRACT-EASY. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+  

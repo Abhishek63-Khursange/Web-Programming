@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+   <h1 id="MainHead">DOM (Document Object Model)</h1>
+
+    <p id="Para">DOM ek programming interface hai jo web pages ko objects ki form me represent karta hai, 
+jisse hum JavaScript ke through HTML elements ko access aur manipulate kar sakte hain.</p>
+    <button onclick="colorchange()">Know More</button>
+
+    <p id="Para1">Document object model is an actual skeleton of HTML file in tree-like structure</p>
+    <button onclick="contentchange()">Know More</button>
+
+    <br><br>
+
+    <button onclick="RemoveHeading()">Remove Heading</button>
+
+
+    <br><br>
+    <br><br>
+    <input type="password" placeholder="Enter password" id="passwordfield">
+    <button onclick="showPassword()" id="btn">Show</button>
+
+
+<script>
+    // color change
+    function colorchange() {
+        var obj = document.getElementById("Para");
+        obj.style.color = 'red';
+    }
+
+    // content change
+    function contentchange() {
+        var object = document.getElementById("Para1");
+        object.innerHTML = "This is the definition of DOM";
+    }
+
+    // removing element
+    function RemoveHeading() {
+        var objectHead = document.getElementById("MainHead"); 
+        objectHead.remove();
+    }
+    // password showing
+
+    function showPassword() {
+            var fieldObj = document.getElementById("passwordfield");
+            var btnObj = document.getElementById("btn");
+            if (btnObj.innerHTML === 'Show') {
+                fieldObj.setAttribute("type", "text");
+                var attrValue = fieldObj.getAttribute("type");
+                btnObj.innerHTML = "Hide";
+            }
+            else {
+                fieldObj.setAttribute("type", "password");
+                btnObj.innerHTML = "Show";
+            }
+
+        }
+
+
+    
+
+</script>
+
+  <br>
+<input type="text" id="num1">
+    <input type="text" id="num2">
+    <button onclick="add()" id="btn">Add</button>
+    <h3 id="result"></h3>
+
+    <script>
+        //geting intput value form user
+        function add() {
+            var n1 = parseInt(document.getElementById("num1").value); 
+            var n2 = parseInt(document.getElementById("num2").value);
+            var n3 = n1 + n2;
+            document.getElementById("result").innerHTML = "Sum is "+n3;
+        }
+    </script>
+
+
+</body>
+</html>

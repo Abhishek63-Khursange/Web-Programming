@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class customer{
+            constructor(Cname,Cid,Corder){
+               this.cname=Cname;
+               this.cid=Cid;
+               this.corder=Corder;
+            }
+
+            CustomerData()
+            {
+                console.log(`Welcome to the Prac-Easy ${this.cname} your customer id is ${this.cid} and your order is ${this.corder} thank you`)
+            }
+        }
+        var cust=new customer('Abhishek',7800,'Laptop i7')
+        cust.CustomerData();
+    </script>
+</body>
+</html>

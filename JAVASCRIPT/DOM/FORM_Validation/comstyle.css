@@ -1,0 +1,112 @@
+/* Reset and base style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Header */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.header-container h1 {
+  font-size: 28px;
+}
+
+.btn-home {
+  padding: 10px 20px;
+  border: none;
+  background: #00c6ff;
+  color: #fff;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-home:hover {
+  background: #0072ff;
+}
+
+/* Main table container */
+.table-container {
+  padding: 30px 50px;
+  text-align: center;
+}
+
+/* Fetch button */
+.btn-fetch {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #ffeb3b;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.btn-fetch:hover {
+  background: #fdd835;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead {
+  background: rgba(0,0,0,0.3);
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  color: #fff;
+}
+
+tr:nth-child(even){
+  background: rgba(255,255,255,0.05);
+}
+
+tr:hover {
+  background: rgba(255,255,255,0.2);
+  transform: scale(1.02);
+  transition: 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  table, th, td {
+    font-size: 14px;
+  }
+
+  .table-container {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Employee{
+            /*
+            constructor(){
+              this.name="Abhishek"
+              this.age=25
+              this.city="Nagpur"
+            }
+            */
+            //parameterized constructor
+            constructor(sname,s_age,s_city){
+                this.age=s_age
+                this.city=s_city
+                this.name=sname
+            }
+
+        }
+        var student=new Employee('Abhihek','Nagpur',24)
+        console.log(student)// student is jason object 
+        console.log(student.name,student.age,student.city)
+        
+    </script>
+</body>
+</html>

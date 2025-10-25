@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     class father{
+        constructor(){
+            
+            this.name="Rjendra"
+            this.SisterName="Nalu"
+            this.BrotherName="Dilip"
+        }
+        
+        fatherSiblings()
+        {
+            console.log(`${this.name}'s sister name is ${this.SisterName} and brother name is ${this.BrotherName}`);
+        }
+
+     }
+     class child extends father{
+       constructor(){
+         super();
+          this.childName = "Abhishek";
+        this.childSister = "Chakuli";
+        this.childBrother = "Aakash";
+
+        }
+        ShowParentData()
+        {
+            super.fatherSiblings();
+        }
+
+        KhursangeFam(){
+            console.log(
+                ` hello i am ${this.name} my brother name is ${this.BrotherName} and my sister name is ${this.SisterName}
+ And i have 2 son and 1 daughter name of my sone is ${this.childName} and ${this.childBrother} and my daughter name is ${this.childSister}`
+            )
+        }
+     }
+
+     var khursange=new child();
+
+     khursange.KhursangeFam();
+     
+     
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | PRACT-EASY</title>
+  <link rel="stylesheet" href="loginStyle.css" />
+</head>
+<body>
+  <div class="login-container">
+    <form class="login-box">
+      <h2>Welcome Back 👋</h2>
+      <p>Login to continue to <strong>PRACT-EASY</strong></p>
+      
+      <input type="text" placeholder="📱 Enter phone number" id="phone-field" required />
+      <input type="password" placeholder="🔒 Enter password" id="password-field" required />
+      <input type="button" value="Login" class="login-btn" onclick="login()" />
+      
+      <h4 id="login-error"></h4> 
+      <p class="signup-text">Don't have an account? <a href="Form.html">Sign up</a></p>
+    </form>
+  </div>
+
+  <script>
+    function login() {
+      var phone = document.getElementById("phone-field").value;
+      var password = document.getElementById("password-field").value;
+      var storedphone = localStorage.getItem("phone");
+      var storedpassword = localStorage.getItem("password");
+
+      if (phone === storedphone && password === storedpassword) {
+        localStorage.setItem("isLoggedIn", "true");
+        location.href = "home.html";
+      } else {
+        document.getElementById("login-error").innerHTML = "❌ Invalid Credentials!";
+      }
+    }
+  </script>
+</body>
+</html>

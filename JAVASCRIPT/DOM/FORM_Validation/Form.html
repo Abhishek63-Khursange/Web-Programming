@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | PRACT-EASY</title>
+  <link rel="stylesheet" href="FormStyle.css">
+</head>
+<body>
+  <div class="form-container">
+    <div class="form-box">
+      <h2>Create Your Account</h2>
+      <p class="subtitle">Join PRACT-EASY and start your journey</p>
+
+      <form id="signupForm" onsubmit="return validation()">
+        <div class="input-group">
+          <input type="text" id="name-field" placeholder="Enter your name">
+          <span id="name-error" class="error"></span>
+        </div>
+
+        <div class="input-group">
+          <input type="text" id="phone-field" placeholder="Enter your phone number">
+          <span id="phone-error" class="error"></span>
+        </div>
+
+        <div class="input-group">
+          <input type="email" id="mail-field" placeholder="Enter your email">
+          <span id="mail-error" class="error"></span>
+        </div>
+
+        <div class="input-group">
+          <input type="password" id="password-field" placeholder="Enter your password">
+          <span id="password-error" class="error"></span>
+        </div>
+
+        <div class="input-group">
+          <input type="password" id="confirm-password-field" placeholder="Confirm your password">
+          <span id="confirm-password-error" class="error"></span>
+        </div>
+
+        <button type="submit" class="btn">Sign Up</button>
+        <p class="switch-page">Already have an account? <a href="login.html">Login</a></p>
+        <p id="result" class="success"></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function validation() {
+      var name = document.getElementById("name-field").value.trim();
+      var phone = document.getElementById("phone-field").value.trim();
+      var email = document.getElementById("mail-field").value.trim();
+      var password = document.getElementById("password-field").value.trim();
+      var confirmPassword = document.getElementById("confirm-password-field").value.trim();
+
+      var phoneRegex = /^\d{10}$/;
+      var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,12}$/;
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      var valid = true;
+
+      // Reset previous errors
+      document.querySelectorAll(".error").forEach(e => e.innerHTML = "");
+
+      // Name
+      if (name === "") {
+        document.getElementById("name-error").innerHTML = "Name is required";
+        valid = false;
+      }
+
+      // Phone
+      if (phone === "") {
+        document.getElementById("phone-error").innerHTML = "Phone number is required";
+        valid = false;
+      } else if (!phoneRegex.test(phone)) {
+        document.getElementById("phone-error").innerHTML = "Phone must be 10 digits";
+        valid = false;
+      }
+
+      // Email
+      if (email === "") {
+        document.getElementById("mail-error").innerHTML = "Email is required";
+        valid = false;
+      } else if (!emailRegex.test(email)) {
+        document.getElementById("mail-error").innerHTML = "Invalid email format";
+        valid = false;
+      }
+
+      // Password
+      if (password === "") {
+        document.getElementById("password-error").innerHTML = "Password is required";
+        valid = false;
+      } else if (!passwordRegex.test(password)) {
+        document.getElementById("password-error").innerHTML =
+          "8-12 chars, 1 uppercase, 1 lowercase & 1 number";
+        valid = false;
+      }
+
+      // Confirm Password
+      if (confirmPassword === "") {
+        document.getElementById("confirm-password-error").innerHTML = "Please confirm password";
+        valid = false;
+      } else if (confirmPassword !== password) {
+        document.getElementById("confirm-password-error").innerHTML = "Passwords do not match";
+        valid = false;
+      }
+
+      if (valid) {
+        localStorage.setItem("name", name);
+        localStorage.setItem("phone", phone);
+        localStorage.setItem("email", email);
+        localStorage.setItem("password", password);
+        document.getElementById("result").innerHTML = "✅ Sign Up Successful!";
+        document.getElementById("signupForm").reset();
+      }
+
+      return false; // prevent page reload
+    }
+  </script>
+</body>
+</html>
