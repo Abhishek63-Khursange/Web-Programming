@@ -1,0 +1,56 @@
+import { Component } from "react";
+import { getuserData } from "./services/FetchData";
+
+export class DataFetch extends Component{
+    constructor(){
+        super();
+        this.state={
+            user:[]
+        }
+    }
+
+        async componentDidMount(){
+            try {
+                const fetchdata=await getuserData(); // imported from services folder 
+                this.setState({user:fetchdata})
+            } catch (error) {
+                console.log(error)
+            }
+        }
+
+        render(){
+            return(
+                <div>
+                  {  this.state.user.length===0 ? <h1>Users Not Found</h1>:
+                <table border="1" cellPadding="10" cellSpacing="0">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>NAME</th>
+                            <th>USERNAME</th>
+                            <th>PHONE</th>
+                            <th>EMAIL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            this.state.user.map((user)=>{
+                                        return(
+                                            <tr>
+                                                <td>{user.id}</td>
+                                                <td>{user.name}</td>
+                                                <td>{user.username}</td>
+                                                <td>{user.phone}</td>
+                                                <td>{user.email}</td>
+                                            </tr>
+                                        )
+                            })
+                        }
+                    </tbody>
+                </table>
+
+                    }
+                </div>
+            )
+        }
+    }
